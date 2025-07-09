@@ -1374,26 +1374,548 @@
 // }
 // }
 
-
-
-
-
-
-
-
-
-
-
 //  new session
 
+//  class - class is a blueprint of object
+//  object - object is an instance of a class, entity.
 
+// class Pen {
+//     String color;
+//     String type;
 
+//     public Pen(String color, String type) {
+//         this.color = color;
+//         this.type = type;
+//     }
 
+//     public void write() {
+//         System.out.println("Writing something");
+//     }
 
+//     public void printcolor() {
+//         System.out.println("color of pen : " + color);
+//     }
+// }
 
+// class student {
+//     String name;
+//     int age;
 
-public class oop{
+//     student(student s2) {
+//         this.name = s2.name;
+//         this.age = s2.age;
+//     }
+
+//     student() {
+
+//     }
+
+//     public void printInfo() {
+//         System.out.println("name : " + name);
+//         System.out.println("age : " + age);
+//     }
+// }
+
+// public class oop {
+//     public static void main(String[] args) {
+//         Pen p1 = new Pen("blue", "gel");
+//         Pen p2 = new Pen("Black", "ballpoint");
+
+//         p1.printcolor();
+//         p2.printcolor();
+
+//         student s1 = new student();
+//         s1.name = "shubham";
+//         s1.age = 20;
+
+//         student s2 = new student(s1);
+
+//         s1.printInfo();
+//         s2.printInfo();
+//     }
+// }
+
+// class shape {
+//     public void area(){
+//         System.out.println("display area");
+//     }
+// }
+// class Triangle extends shape {
+//     public void area(int l, int h){
+//         System.out.println(1/2*l*h);
+//     }
+// }
+// class equilateralTriangle extends Triangle {
+//     public void area(int l, int h){
+//         System.out.println(1/2*l*h);
+//     }
+// }
+
+// class circle extends shape {
+//     public void area(int r){
+//         System.out.println((3.14)* r * r);
+//     }
+// }
+
+// public class oop {
+//     public static void main(String[] args) {
+//         Triangle t = new Triangle();
+
+//     }
+// }
+
+// abstract class Animal {
+//     abstract void walk();
+
+//     public void eat() {
+//         System.out.println("Animal eat");
+//     }
+
+//     public Animal() {
+//         System.out.println("you are creating a new constructor");
+//     }
+
+// }
+
+// class horse extends Animal {
+//     horse() {
+//         System.out.println("created a horse");
+//     }
+
+//     public void walk() {
+//         System.out.println("walks on 4 legs");
+//     }
+// }
+
+// class chicken extends Animal {
+//     public void walk() {
+//         System.out.println("walks on 2 legs");
+//     }
+// }
+
+// public class oop {
+//     public static void main(String[] args) {
+//         horse h = new horse();
+//         h.walk();
+//         h.eat();
+//     }
+// }
+
+// interface Animal {
+//     public void walk();
+// }
+
+// class horse implements Animal {
+//     public void walk() {
+//         System.out.println("walks on 4 leg");
+//     }
+// }
+
+// public class oop {
+//     public static void main(String[] args) {
+//         horse h = new horse();
+//         h.walk();
+//     }
+// }
+
+// class student {
+//     String name;
+//     static String school;
+
+//     public static void changeSchool (){
+//         school = "newschool";
+//     }
+// }
+
+// public class oop {
+//     public static void main(String[] args) {
+//         student.school = "sharda";
+//         student s = new student();
+//         s.name = "shubham";
+
+//         System.out.println(s.school);
+//     }
+// }
+
+// Create a class Display with overloaded show() methods. Then override show() in a subclass.
+
+// class Display {
+//     public void show() {
+//         System.out.println("Display - show with no argument");
+//     }
+
+//     public void show(String message) {
+//         System.out.println("Display - show with message");
+//     }
+
+//     public void show(int number) {
+//         System.out.println("Display - show with number");
+//     }
+// }
+
+// class subDisplay extends Display {
+//     @Override
+//     public void show() {
+//         System.out.println("subDisplay - override with no argument");
+//     }
+// }
+
+// public class oop {
+//     public static void main(String[] args) {
+//         Display d = new Display();
+//         d.show();
+//         d.show("shubham");
+//         d.show(12);
+
+//         subDisplay sd = new subDisplay();
+//         sd.show();
+//         sd.show("subhanshu");
+//         sd.show(89);
+
+//     }
+// }
+
+// Vehicle class has run(). Override it in Truck and Bike. Demonstrate runtime polymorphism.
+
+// class Vehicle {
+//     public void run() {
+//         System.out.println("Vehicle is running");
+//     }
+// }
+
+// class Truck extends Vehicle {
+//     @Override
+//     public void run() {
+//         System.out.println("Truck is running");
+//     }
+// }
+
+// class Bike extends Vehicle {
+//     @Override
+//     public void run() {
+//         System.out.println("Bike is running");
+//     }
+// }
+
+// public class oop {
+//     public static void main(String[] args) {
+//         Vehicle v = new Vehicle();
+//         v.run();
+
+//         Truck t = new Truck();
+//         t.run();
+
+//         Bike b = new Bike();
+//         b.run();
+//     }
+// }
+
+// Define Notification class with overloaded constructors. Override send() method in subclass.
+
+// class Notification {
+//     String recipient;
+//     String message;
+
+//     public Notification() {
+//         this.recipient = "unknown";
+//         this.message = "No message";
+//     }
+
+//     public Notification(String recipient) {
+//         this.recipient = recipient;
+//     }
+
+//     public Notification(String recipient, String message) {
+//         this.recipient = recipient;
+//         this.message = message;
+//     }
+
+//     public void send() {
+//         System.out.println("sending message to " + recipient + " : " + message);
+//     }
+// }
+
+// class EmailNotification extends Notification {
+
+//     public EmailNotification(String recipient, String message) {
+//         super(recipient, message);
+//     }
+
+//     @Override
+//     public void send() {
+//         System.out.println("sending email to " + recipient + " with message " + message);
+//     }
+// }
+
+// class SMSNOtification extends Notification {
+//     public SMSNOtification(String recipient, String message) {
+//         this.recipient = recipient;
+//         this.message = message;
+//     }
+
+//     @Override
+//     public void send() {
+//         System.out.println("sending sms to " + recipient + " with  message " + message);
+//     }
+// }
+
+// public class oop {
+//     public static void main(String[] args) {
+//         Notification n = new Notification();
+//         n.send();
+
+//         EmailNotification en = new EmailNotification("shubham@gmail.com", "Interview at 3");
+//         en.send();
+
+//         SMSNOtification sn = new SMSNOtification("shubham@gmail.com", "Java interview at 5");
+//         sn.send();
+
+//     }
+// }
+
+//  Bank class has calculateInterest(). Overload by duration, override in SBI and ICICI.
+
+// class Bank {
+//     double rateOfIntrest;
+
+//     public double calculateInterest(double principal) {
+//         rateOfIntrest = 5.0;
+//         return (principal * rateOfIntrest * 1) / 100;
+//     }
+
+//     public double calculateInterest(double principal, int year) {
+//         rateOfIntrest = 5.0;
+//         return (principal * rateOfIntrest * year) / 100;
+//     }
+
+//     public double calculateInterest(double principal, int year, double rateOfIntrest) {
+//         return (principal * rateOfIntrest * year) / 100;
+//     }
+// }
+
+// class SBI extends Bank {
+//     public double calculateInterest(double principal) {
+//         rateOfIntrest = 8.0;
+//         return (principal * rateOfIntrest * 1) / 100;
+//     }
+// }
+
+// class ICICI extends Bank {
+//     public double calculateInterest(double principal) {
+//         rateOfIntrest = 8.5;
+//         return (principal * rateOfIntrest * 1) / 100;
+//     }
+// }
+
+// public class oop {
+//     public static void main(String[] args) {
+//         Bank b = new Bank();
+//         System.out.println("Bank Interest (1 year) : " + b.calculateInterest(100000));
+//         System.out.println("Bank Interest (3 year) : " + b.calculateInterest(100000, 3));
+//         System.out.println("Bank Interest (3 year - 7.5%) : " + b.calculateInterest(100000, 3, 7.5));
+
+//         SBI sbi = new SBI();
+//         System.out.println("SBI Interest (1 year) : " + sbi.calculateInterest(100000));
+
+//         ICICI icici = new ICICI();
+//         System.out.println("ICICI Interest (1 year) : " + sbi.calculateInterest(100000));
+//     }
+// }
+
+//  Build a ChatBot class that overloads respond() method and overrides it in SalesBot and SupportBot.
+
+// class ChatBot {
+//     public void respond(){
+//         System.out.println("ChatBot : Hello! I can you help you?");
+//     }
+//     public void respond(String message){
+//         System.out.println("ChatBot: You said - " + message);
+//     }
+//     public void respond(String message, String userType){
+//         System.out.println("ChatBot: [" + userType + "] " + message);
+//     }
+// }
+// class SalesBot extends ChatBot{
+//     @Override
+//     public void respond(){
+//         System.out.println("SalesBot: Welcome! Looking for our latest offers?");
+//     }
+// }
+// class SupportBot {
+//     public void respond(){
+//         System.out.println("SupportBot: Hi there! Tell me your issue, I'm here to help");
+//     }
+// }
+
+// public class oop{
+//     public static void main(String[] args) {
+//         ChatBot cb = new ChatBot();
+//         cb.respond();
+
+//         SalesBot sb = new SalesBot();
+//         sb.respond();
+
+//         SupportBot sbb = new SupportBot();
+//         sbb.respond();
+//     }
+// }
+
+// Method Overloading: Create a Calculator class with overloaded methods add(int, int), add(double, double).
+
+// class calculator {
+//     public void add(int a, int b) {
+//         System.out.println(a + b);
+//     }
+
+//     public void add(double a, double b) {
+//         System.out.println(a + b);
+//     }
+// }
+
+// public class oop {
+//     public static void main(String[] args) {
+//         calculator c = new calculator();
+//         c.add(2, 3);
+//         c.add(5.0, 6.0);
+//     }
+// }
+
+//  Q2. Method Overriding: Define a Printer class and override print() method in LaserPrinter, InkjetPrinter.
+
+// class printer {
+//     public void print(){
+//         System.out.println("Printer: Printing a document...");
+//     }
+// }
+// class LaserPrinter  extends printer{
+//     @Override
+//     public void print(){
+//         System.out.println("LaserPrinter: Printing using laser technology.");
+//     }
+// }
+// class InkjetPrinter extends printer{
+//     @Override
+//     public void print(){
+//         System.out.println("InkjetPrinter: Printing using inkjet technology.");
+//     }
+// }
+
+// public class oop {
+//     public static void main(String[] args) {
+//         printer p = new printer();
+//         p.print();
+
+//         LaserPrinter lp = new LaserPrinter();
+//         lp.print();
+
+//         InkjetPrinter ip = new InkjetPrinter();
+//         ip.print();
+
+//     }
+// }
+
+// create a corporate Notification class with method send(). Override it in EmailNotification, SMSNotification.
+
+// class Notification {
+//     public void send(){
+//         System.out.println("sending coperate notification");
+//     }
+// }
+// class EmailNOtification extends Notification {
+//     @Override
+//     public void send(){
+//         System.out.println("sending email to coperate client");
+//     }
+// }
+// class SMSNOtification extends Notification {
+//     @Override
+//     public void send(){
+//         System.out.println("sending sms to coperate client");
+//     }
+// }
+// public class  oop {
+//     public static void main(String[] args) {
+//         Notification n = new Notification();
+//         n.send();
+
+//         EmailNOtification en = new EmailNOtification();
+//         en.send();
+
+//         SMSNOtification sn = new SMSNOtification();
+//         sn.send();
+//     }
+// }
+
+// Build a MediaPlayer interface and implement polymorphic play() methods in MP3Player, MP4Player, WAVPlayer.
+
+// interface MediaPlayer {
+//     public void play();
+// }
+
+// class MP3Player implements MediaPlayer {
+//     public void play() {
+//         System.out.println("Playing audio from an MP3 file...");
+//     }
+// }
+
+// class MP4Player implements MediaPlayer {
+//     public void play() {
+//         System.out.println("Playing video and audio from an MP4 file...");
+//     }
+// }
+
+// class WAVPlayer implements MediaPlayer {
+//     public void play() {
+//         System.out.println("Playing high-quality audio from a WAV file...");
+//     }
+// }
+
+// public class oop {
+//     public static void main(String[] args) {
+//         MediaPlayer player;
+
+//         player = new MP3Player();
+//         player.play();
+
+//         player = new MP4Player();
+//         player.play();
+
+//         player = new WAVPlayer();
+//         player.play();
+
+//     }
+// }
+
+//  In a warehouse system, create Item class with ship() method, overridden in FragileItem, HeavyItem.
+
+class Item {
+    public void ship() {
+        System.out.println("Shipping item using standard method...");
+    }
+}
+
+class FragileItem extends Item {
+    @Override
+    public void ship() {
+        System.out.println("Shipping fragile item with extra padding and fragile label.");
+    }
+}
+
+class HeavyItem extends Item {
+    @Override
+    public void ship() {
+        System.out.println("Shipping heavy item using forklift and reinforced packaging.");
+    }
+}
+
+public class oop {
     public static void main(String[] args) {
-        
+        Item item;
+
+        item = new FragileItem();
+        item.ship();
+
+        item = new HeavyItem();
+        item.ship();
     }
 }
